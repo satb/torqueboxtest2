@@ -1,0 +1,13 @@
+<% content_for :container do %>
+        <%= simple_form_for @user do |f| %>
+            <fieldset id="inputs">
+              <%= f.input :email %>
+              <%= f.input :password %>
+            </fieldset>
+            <fieldset id="submit">
+              <%= f.button :submit, "Sign Up", :id=>'submit' %>
+            </fieldset>
+            <p><%= link_to "Sign In", new_session_path %></p>
+        <% end %>
+<% end %>
+

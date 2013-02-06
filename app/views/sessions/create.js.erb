@@ -1,0 +1,5 @@
+<% if logged_in? %>
+    Turbolinks.visit("<%= @return_url %> ");
+<% else %>
+    $('#alert-message').html("<div class='alert alert-error'><a class='close' data-dismiss='alert'>x</a>Either the username or password is incorrect!</div>");
+<% end %>
